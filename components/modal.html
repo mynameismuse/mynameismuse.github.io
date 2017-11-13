@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <title>
+        
+        对话框 | 
+        联通通用样式库
+    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="/css/Icon.min.css">
+    
+        <link rel="stylesheet" href="/css/page.css">
+    
+    
+    <link rel="stylesheet" href="/css/woUI.min.css">
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/sidebar.min.js"></script>
+    <script type="text/javascript" src="/js/woUI.min.js"></script>
+</head>
+<body>
+	
+		
+		<div class="ui sidebar inverted vertical menu"><a class="item-title">菜单</a><a class="item" href="/docs/install.html">指南</a><a class="item" href="/components/getting-started.html">组件</a><a class="item" href="/resources/resource.html">资源</a><a class="item" href="/about/about.html">关于</a><br><a class="item-title">子菜单</a><a class="item" href="component.html">最新更新</a><a class="item" href="getting-started.html">快速上手</a><a class="item" href="button.html">按钮</a><a class="item" href="breadcrumb.html">面包屑</a><a class="item" href="avatar.html">图片</a><a class="item" href="tooltip.html">提示框</a><a class="item" href="menu.html">菜单</a><a class="item" href="message.html">消息框</a><a class="item" href="checkbox.html">多选框</a><a class="item" href="tabs.html">标签页</a><a class="item" href="pagination.html">分页</a><a class="item" href="datepicker.html">日期选择器</a><a class="item" href="modal.html">对话框</a></div>
+	
+  <div class="main">
+      <div class="headerWrapper">
+	<div class="header header-home">
+		<div class="container">
+			<h1 class="logo">
+				<a href="/">
+					
+						<img src="/img/woui-logo-white@2x.png">
+					
+				</a>
+			</h1>
+			<ul class="nav">
+				
+				<li class="nav-item"><a href="/docs/install.html">指南</a></li><li class="nav-item"><a href="/components/getting-started.html">组件</a></li><li class="nav-item"><a href="/resources/resource.html">资源</a></li><li class="nav-item"><a href="/about/about.html">关于</a></li>
+				<li class="nav-item mobile" id="mobile-icon">
+					<a>
+						
+							<img src="/img/sidebar-white.png">
+						
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="contentWrapper">
+	<div class="container">
+		<div class="content-inner">
+			<article class="article-container">
+				<div class="article-inner">
+					<div class="article">
+						<style>
+    button {
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+    .btn-group button, .btn-vertical-group button{
+        margin: 0;
+    }
+</style>
+
+<h1 id="对话框"><a href="#对话框" class="headerlink" title="对话框"></a>对话框</h1><p>在保留当前页面状态的情况下，告知用户并承载相关操作。</p>
+<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p><code>Modal</code> 弹出一个对话框，适合需要定制性的更大的场景。</p>
+<div id="modal1">
+	这是一段信息
+</div>
+<button class="btn btn-blue" onclick="open1()">打开弹窗</button>
+<button class="btn btn-blue" onclick="setHeader1()">改变标题</button>
+<button class="btn btn-blue" onclick="setContent()">改变内容(String)</button>
+<button class="btn btn-blue" onclick="setContent2()">改变内容(Nodes)</button>
+<script type="text/javascript">var modal = new woUI.Modal({
+	id: '#modal1',
+	visible: false,
+	size: 'small',
+	title: '这是一个标题',
+	dimmer: true,
+	dimmerClosable: true,
+	closable: false,
+	escapeClosable: true,
+	onCancel: function() {
+		modal.close()
+	},
+	onOk: function() {
+		modal.close()
+	}
+});
+
+function open1() {
+	modal.open();
+}
+
+function setHeader1() {
+	modal.setHeader("这是新的标题");
+	modal.open();
+}
+
+function setContent() {
+	modal.setContent('这是新的内容');
+	modal.open();
+}
+
+function setContent2() {
+	var array = [];
+	var h1 = document.createElement('h1');
+	h1.innerHTML = '新的内容';
+	array.push(h1);
+
+	modal.setContent(array);
+	modal.open();
+}</script>
+<div class="demo"><button class="demo-button"><i class="icon icon-arrow-down"></i><span>显示代码</span></button><div class="demo-content"><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"modal1"</span>&gt;</span></div><div class="line">	这是一段信息</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn btn-blue"</span> <span class="attr">onclick</span>=<span class="string">"open1()"</span>&gt;</span>打开弹窗<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn btn-blue"</span> <span class="attr">onclick</span>=<span class="string">"setHeader1()"</span>&gt;</span>改变标题<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn btn-blue"</span> <span class="attr">onclick</span>=<span class="string">"setContent()"</span>&gt;</span>改变内容(String)<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn btn-blue"</span> <span class="attr">onclick</span>=<span class="string">"setContent2()"</span>&gt;</span>改变内容(Nodes)<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> modal = <span class="keyword">new</span> woUI.Modal(&#123;</div><div class="line">  id: <span class="string">'#modal1'</span>,</div><div class="line">  visible: <span class="literal">false</span>,</div><div class="line">  size: <span class="string">'small'</span>,</div><div class="line">  title: <span class="string">'这是一个标题'</span>,</div><div class="line">  dimmer: <span class="literal">true</span>,</div><div class="line">  dimmerClosable: <span class="literal">true</span>,</div><div class="line">  closable: <span class="literal">false</span>,</div><div class="line">  escapeClosable: <span class="literal">true</span>,</div><div class="line">  onCancel: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    modal.close()</div><div class="line">  &#125;,</div><div class="line">  onOk: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    modal.close()</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">open1</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  modal.open();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">setHeader1</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  modal.setHeader(<span class="string">"这是新的标题"</span>);</div><div class="line">  modal.open();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">setContent</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  modal.setContent(<span class="string">'这是新的内容'</span>);</div><div class="line">  modal.open();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">setContent2</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> array = [];</div><div class="line">  <span class="keyword">var</span> h1 = <span class="built_in">document</span>.createElement(<span class="string">'h1'</span>);</div><div class="line">  h1.innerHTML = <span class="string">'新的内容'</span>;</div><div class="line">  array.push(h1);</div><div class="line"></div><div class="line">  modal.setContent(array);</div><div class="line">  modal.open();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</div></div>
+<h2 id="自定义内容"><a href="#自定义内容" class="headerlink" title="自定义内容"></a>自定义内容</h2><p><code>Modal</code> 组件的内容可以是任意的，甚至可以是表格或表单，下面是应用了 <code>Element Table</code> 和 <code>Form</code> 组件的两个样例。</p>
+<div id="modal2">
+	<h1>测试一下</h1>
+	<button class="btn btn-blue">点一下</button>
+</div>
+<button class="btn btn-blue" onclick="open2()">打开弹窗</button>
+<script type="text/javascript">var modal2 = new woUI.Modal({
+	id: '#modal2',
+	visible: false,
+	title: '这是一个标题',
+	dimmerclosable: true,
+	onCancel: function() {
+		modal2.close()
+	},
+	onOk: function() {
+		modal2.close()
+	}
+})
+
+function open2() {
+	modal2.open();
+}</script>
+<div class="demo"><button class="demo-button"><i class="icon icon-arrow-down"></i><span>显示代码</span></button><div class="demo-content"><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"modal2"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>测试一下<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn btn-blue"</span>&gt;</span>点一下<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn btn-blue"</span> <span class="attr">onclick</span>=<span class="string">"open2()"</span>&gt;</span>打开弹窗<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> modal2 = <span class="keyword">new</span> woUI.Modal(&#123;</div><div class="line">  id: <span class="string">'#modal2'</span>,</div><div class="line">  visible: <span class="literal">false</span>,</div><div class="line">  title: <span class="string">'这是一个标题'</span>,</div><div class="line">  dimmerclosable: <span class="literal">true</span>,</div><div class="line">  onCancel: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    modal2.close()</div><div class="line">  &#125;,</div><div class="line">  onOk: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    modal2.close()</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">open2</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  modal2.open();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</div></div>
+<h2 id="Options-参数"><a href="#Options-参数" class="headerlink" title="Options 参数"></a>Options 参数</h2><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>可选值</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>绑定元素id (需支持queryselector)</td>
+<td>string</td>
+<td>-</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>visible</td>
+<td>是否显示Modal</td>
+<td>boolean</td>
+<td>-</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+<td>string</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>size</td>
+<td>尺寸</td>
+<td>string</td>
+<td>-/mini/small/large/</td>
+<td>-</td>
+</tr>
+<tr>
+<td>dimmer</td>
+<td>是否显示遮罩层</td>
+<td>boolean</td>
+<td>-</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>dimmerClosable</td>
+<td>遮罩层是否可以关闭</td>
+<td>boolean</td>
+<td>-</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>closable</td>
+<td>Modal是否显示关闭按钮</td>
+<td>boolean</td>
+<td>-</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>customClass</td>
+<td>自定义类名</td>
+<td>string</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>escapeClosable</td>
+<td>是否支持ESC键关闭</td>
+<td>boolean</td>
+<td>-</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>footer</td>
+<td>是否显示底部按钮组</td>
+<td>boolean</td>
+<td>-</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>onOk</td>
+<td>点击底部ok按钮回调函数</td>
+<td>function</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>onCancel</td>
+<td>点击底部cancel按钮回调函数</td>
+<td>function</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>okText</td>
+<td>底部ok按钮显示文字</td>
+<td>string</td>
+<td>-</td>
+<td><code>确定</code></td>
+</tr>
+<tr>
+<td>cancelText</td>
+<td>底部cancel按钮显示文字</td>
+<td>string</td>
+<td>-</td>
+<td><code>取消</code></td>
+</tr>
+<tr>
+<td>onOpen</td>
+<td>打开Modal回调函数</td>
+<td>function</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>onClose</td>
+<td>关闭Modal回调函数</td>
+<td>function</td>
+<td>-</td>
+<td>- </td>
+</tr>
+<tr>
+<td>zIndex</td>
+<td>Modal的Z-index</td>
+<td>number</td>
+<td>-</td>
+<td><code>null</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Events-事件"><a href="#Events-事件" class="headerlink" title="Events 事件"></a>Events 事件</h2><h3 id="Modal-prototype-open-callback"><a href="#Modal-prototype-open-callback" class="headerlink" title="Modal.prototype.open(callback)"></a>Modal.prototype.open(callback)</h3><p>打开对话框</p>
+<p><code>callback</code>: 可向方法内输送回调函数, 在动作结束后回调使用, 传入的<code>callback</code>必须是一个<code>function</code></p>
+<div class="demo"><button class="demo-button"><i class="icon icon-arrow-down"></i><span>显示代码</span></button><div class="demo-content"><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">modal.open();</div></pre></td></tr></table></figure>
+</div></div>
+<h3 id="Modal-prototype-close-callback"><a href="#Modal-prototype-close-callback" class="headerlink" title="Modal.prototype.close(callback)"></a>Modal.prototype.close(callback)</h3><p>关闭对话框</p>
+<p><code>callback</code>: 可向方法内输送回调函数, 在动作结束后回调使用, 传入的<code>callback</code>必须是一个<code>function</code></p>
+<div class="demo"><button class="demo-button"><i class="icon icon-arrow-down"></i><span>显示代码</span></button><div class="demo-content"><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">modal.close();</div></pre></td></tr></table></figure>
+</div></div>
+<h3 id="Modal-prototype-setHeader-text-callback"><a href="#Modal-prototype-setHeader-text-callback" class="headerlink" title="Modal.prototype.setHeader(text, callback)"></a>Modal.prototype.setHeader(text, callback)</h3><p>设置对话框标题</p>
+<p><code>text</code>: 对话框标题内容文字<br><code>callback</code>: 可向方法内输送回调函数, 在动作结束后回调使用, 传入的<code>callback</code>必须是一个<code>function</code></p>
+<div class="demo"><button class="demo-button"><i class="icon icon-arrow-down"></i><span>显示代码</span></button><div class="demo-content"><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">modal.setHeader('这是一个标题', callback);</div></pre></td></tr></table></figure>
+</div></div>
+<h3 id="Modal-prototype-setContent-content-callback"><a href="#Modal-prototype-setContent-content-callback" class="headerlink" title="Modal.prototype.setContent(content, callback)"></a>Modal.prototype.setContent(content, callback)</h3><p>设置对话框内容</p>
+<p><code>content</code> : 对话框内容(可以为string或者nodes)<br><code>callback</code>: 可向方法内输送回调函数, 在动作结束后回调使用, 传入的<code>callback</code>必须是一个<code>function</code></p>
+<div class="demo"><button class="demo-button"><i class="icon icon-arrow-down"></i><span>显示代码</span></button><div class="demo-content"><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">modal.setContent('这是一个标题', callback);</div></pre></td></tr></table></figure>
+</div></div>
+
+					</div>
+					<div class="article-toc">
+						<div class="article-toc-inner">
+							<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#对话框"><span class="toc-text">对话框</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本用法"><span class="toc-text">基本用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义内容"><span class="toc-text">自定义内容</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">测试一下</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Options-参数"><span class="toc-text">Options 参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Events-事件"><span class="toc-text">Events 事件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Modal-prototype-open-callback"><span class="toc-text">Modal.prototype.open(callback)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Modal-prototype-close-callback"><span class="toc-text">Modal.prototype.close(callback)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Modal-prototype-setHeader-text-callback"><span class="toc-text">Modal.prototype.setHeader(text, callback)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Modal-prototype-setContent-content-callback"><span class="toc-text">Modal.prototype.setContent(content, callback)</span></a></li></ol></li></ol></li></ol>
+						</div>
+					</div>
+				</div>
+			</article>
+			<aside class="sidebar">
+				<div class="inner">
+					
+					<strong class="sidebar-title">更新日志</strong><a class="sidebar-link"" href="component.html">最新更新</a><strong class="sidebar-title">基础组件</strong><a class="sidebar-link"" href="getting-started.html">快速上手</a><a class="sidebar-link"" href="button.html">按钮</a><a class="sidebar-link"" href="breadcrumb.html">面包屑</a><a class="sidebar-link"" href="avatar.html">图片</a><a class="sidebar-link"" href="tooltip.html">提示框</a><a class="sidebar-link"" href="menu.html">菜单</a><a class="sidebar-link"" href="message.html">消息框</a><a class="sidebar-link"" href="checkbox.html">多选框</a><a class="sidebar-link"" href="tabs.html">标签页</a><a class="sidebar-link"" href="pagination.html">分页</a><a class="sidebar-link"" href="datepicker.html">日期选择器</a><a class="sidebar-link current"" href="modal.html">对话框</a>
+				</div>
+			</aside>
+		</div>
+	</div>
+</div>
+<div class="footerWrapper">
+	<div class="container">
+		<div class="footer-main">
+			<p class="footer-main-title">
+				WoUI 1.0 Alpha Version
+			</p>
+			<p class="footer-main-desc">Powered By 联通支付用户体验设计中心</p>
+		</div>
+		<div class="footer-social">
+			<a href="http://192.168.7.53:3000/woUI/woUI">
+				<img src="/img/github@2x.png">
+			</a>
+		</div>
+	</div>
+</div>
+<script>
+	//定义文章根元素
+	var content = document.querySelector('.article')
+	//查询所有h2标题
+	// var h2 = content.querySelectorAll('h2');
+	// for(var i = 0, length = h2.length; i < length; i++) {
+	// 	var a = h2[i].querySelector('a');
+	// 	var outWrap = document.createElement('a');
+	// 	outWrap.id = '#' + h2[i].id;
+	// 	content.insertBefore(outWrap,h2[i]);
+	// 	outWrap.appendChild(h2[i]);
+
+	// 	var link = document.createElement('a');
+	// 	link.innerHTML = '#';
+	// 	link.href = '#' + h2[i].id;
+	// 	link.className = 'header-link';
+	// 	h2[i].appendChild(link);
+	// }	
+
+	//查询所有h3标题
+	// var h3 = content.querySelectorAll('h3');
+	// for(var i = 0, length = h3.length; i < length; i++) {
+	// 	var a = h3[i].querySelector('a');
+	// 	var outWrap = document.createElement('a');
+	// 	outWrap.id = '#' + h3[i].id;
+	// 	outWrap.style.position = 'relative';
+	// 	content.insertBefore(outWrap, h3[i]);
+	// 	outWrap.appendChild(h3[i]);
+
+	// 	var link = document.createElement('a');
+	// 	link.innerHTML = '#';
+	// 	link.href = '#' + h3[i].id;
+	// 	link.className = 'header-link';
+	// 	h3[i].appendChild(link);
+	// }
+
+	//toc置顶
+	var toc = document.querySelector('.article-toc');
+	var header = document.querySelector('.headerWrapper');
+	var headerHeight = header.clientHeight;
+
+	window.addEventListener('scroll', function() {
+
+		var scrollTop = document.scrollingElement.scrollTop;
+
+		if(scrollTop > headerHeight) {
+			toc.className = 'article-toc fixed';
+		}else {
+			toc.className = 'article-toc';
+		}
+	});
+
+	//代码块提取
+	var demos = document.querySelectorAll('.demo');
+	for(var i = 0, length = demos.length; i < length; i++) {
+
+		var button = demos[i].querySelector('button');
+			
+		var click = demoClick(demos[i]);
+		button.addEventListener('click', click);
+	}
+
+	function demoClick (el) {
+		return function () {
+			var button = el.querySelector('button');
+			var text = button.querySelector('span');
+			var icon = button.querySelector('.icon');
+			if(el.classList.contains('active')) {
+				el.classList.remove('active');
+				icon.classList.remove('active');
+				text.innerHTML = '显示代码';
+			}else {
+				el.classList.add('active');
+				icon.classList.add('active');
+				text.innerHTML = '隐藏代码';
+			}
+
+			console.log(el);
+		}
+	}
+
+	window.addEventListener('scroll', updateSidebar);
+
+	function updateSidebar() {
+		var doc = document.documentElement;
+		var article =document.querySelector('.article');
+		var allHeaders = article.querySelectorAll('h1, h2, h3');
+		var top = doc && doc.scrollTop || document.body.scrollTop;
+		var last;
+		var index;
+
+		for (var i = 0; i < allHeaders.length; i++) {
+			var link = allHeaders[i];
+			if(link.offsetTop > top + 80) {
+				last = link;
+				index = i;
+				break;
+			}
+		}
+
+		if(last) {
+			setActive(last, index);
+		}
+	}
+
+	function setActive(el, index) {
+		var previousActive = document.querySelector('.toc-link.active');
+		var subTitles = document.querySelectorAll('.toc-text');
+
+		if(previousActive) {
+			previousActive.classList.remove('active');
+		}
+
+		if(typeof index == 'number') {
+			subTitles[index].parentNode.classList.add('active');
+		}
+	}
+</script>
+
+
+
+
+
+
+
+
+
+
+  </div>
+</body>
+<script type="text/javascript">
+	console.log('敢偷看我代码!! 发现问题你知道找谁吗？ 你需要联系王昊,你知道吗？ 以后没有我的允许, 不许看我代码!!!!');
+
+	var mobileIcon = document.getElementById('mobile-icon');
+	mobileIcon.addEventListener('click', function() {
+		$('.ui.sidebar')
+		  .sidebar('toggle')
+		;
+	});
+</script>
+</html>
