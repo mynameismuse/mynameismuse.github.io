@@ -11,6 +11,7 @@
 #woui_web_normcolorPlette .woui_web_norm_item {
     display: inline-block;
     width: 110px;
+    /*height:120px;*/
     text-align: center;
 }
 
@@ -19,7 +20,7 @@
     width: 90px;
     height: 90px;
     position: relative;
-    margin: 0 auto;
+    margin: 12px auto;
     color: #ffffff;
     font-size: 14px;
     display: inline-block;
@@ -32,7 +33,7 @@
 }
 
 #woui_web_normcolorPlette .woui_web_norm_item .woui_web_normcontent_btnColor > div i {
-    color: #6869D1;
+    color: #fff;
 }
 
 #woui_web_normcolorPlette .woui_web_norm_item .woui_web_normcontent_btnColor.content_btnColor_black {
@@ -146,7 +147,7 @@ s #woui_web_norm_chinesefont .woui_web_norm_wrapper .woui_web_norm_chinesefont-b
 }
 
 #woui_web_norm_chinesefont .woui_web_norm_wrapper .woui_web_norm_chinesefont-box.two p {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 #woui_web_norm_chinesefont .woui_web_norm_wrapper .woui_web_norm_chinesefont-box.three p {
@@ -203,7 +204,7 @@ s #woui_web_norm_chinesefont .woui_web_norm_wrapper .woui_web_norm_chinesefont-b
 }
 
 #woui_web_norm_englishfont .woui_web_norm_wrapper .woui_web_norm_chinesefont-box.two p {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 #woui_web_norm_englishfont .woui_web_norm_wrapper .woui_web_norm_chinesefont-box.three p {
@@ -328,7 +329,7 @@ margin-top: 20px;
     width: 100%;
     height: 500px;
     border: 1px solid #D2D2D2;
-    /*margin-bottom: 124px;*/
+    position: relative;
 }
 .containTwo .conSide{
     width: 20%;
@@ -338,9 +339,32 @@ margin-top: 20px;
     text-align: center;
 
 }
-
+.containTwo .conMiddle-top {
+    position: absolute;
+    left: 230px;
+    z-index: 100;
+}
+.containTwo .conMiddle-top div {
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    color: #777777;
+    width: 100px;
+    height: 64px;
+    line-height: 64px;
+    border-bottom: 4px solid #fff ;
+    transition: all .2s ease;
+}
+.containTwo .conMiddle-top div i{
+    transform: rotate(180deg);
+    margin-left: 14px;
+}
+.containTwo .conMiddle-top div:hover {
+    color: #FF5150;
+    border-bottom: 4px solid #FF5150;
+}
 .containTwo .conSide #leader .firlogo {
-    font-size: 16px;
+    font-size: 14px;
     color: #FFFFFF;
     line-height: 68px;
 }
@@ -396,7 +420,7 @@ margin-top: 20px;
 }
 #woui_web_normtopside .woui_web_normtopside-box {
     width: 100%;
-    height: 500px;
+    height: 441px;
     background: #E9EEF2;
     border: 1px solid #D2D2D2;
 }
@@ -404,6 +428,11 @@ margin-top: 20px;
     height: 68px;
     background: #3F4464;
     border: 1px solid #3F4464;
+}
+#woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsideone2{
+    height: 68px;
+    background: #FFFFFF;
+    border-left: 1px solid #D2D2D2;
 }
 #woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsidetwo {
     height: 68px;
@@ -415,9 +444,9 @@ margin-top: 20px;
     width: 100%;position: relative;
 }
 #woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsidethree .woui_web_normtopsidethreeinner {
-    width: 98%;
+    /*width: 98.8%;*/
     height: 350px;
-    margin: 4px auto;
+    margin: 10px;
     background: #FFFFFF;
     border: 1px solid #D2D2D2;
 }
@@ -427,9 +456,10 @@ margin-top: 20px;
     text-align: center;
     background: #FFFFFF;
     border-right: 1px solid #D2D2D2;
+    border-bottom: 1px solid #D2D2D2;
 }
 #woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsidethree .woui_web_normtopsidethreeinner .woui_web_normtopsidethreeinnernavigation .firname {
-    font-size: 16px;
+    font-size: 14px;
     color: #777777;
 }
 #woui_web_normtopside .icon{
@@ -449,10 +479,11 @@ margin-top: 20px;
     font-size: 14px!important;
     color: #777777!important;
     padding-left: 30px!important;
+    border-right: 2px solid #fff;
 }
 #woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsidethree .woui_web_normtopsidethreeinnernavigation .firname .firnamelist .sub-list a:hover {
     color: #FF5150!important;
-    border-right: 1px solid #FF5150!important;
+    border-right: 2px solid #FF5150!important;
 }
 #woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsideone .logo {
     width: 20%;
@@ -465,8 +496,22 @@ margin-top: 20px;
     width: 100%;
     display: block;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     color: #FFFFFF;
+}
+#woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsideone2 .logo2{
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+#woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsideone2 .logo2 a{
+    height: 100%;
+    line-height: 68px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #777777;
 }
 #woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsideone .list {
     width: 60%;
@@ -482,12 +527,45 @@ margin-top: 20px;
     height: 100%;
     line-height: 68px;
     opacity: 0.5;
-    font-size: 16px;
+    font-size: 14px;
     color: #FFFFFF;
 }
 #woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsideone .list .listone a:hover {
     opacity: 1;
 }
+#woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsideone2 .list2{
+    width: 70%;
+    height: 100%;
+    float: right;
+}
+#woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsideone2 .list2 .listone{
+    float: left;
+    width: 100px;
+    /*text-align: center;*/
+}
+#woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsideone2 .list2 .listone a {
+    /*height: 100%;*/
+    width: 100px;
+    display: inline-block;
+    line-height: 64px;
+    text-align: center;
+    font-size: 14px;
+    color: #777777;
+    border-bottom:4px solid #fff ;
+    transition: all .2s ease;
+
+}
+#woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsideone2 .list2 .listone i{
+    transform: rotate(180deg);
+    float: right;
+    line-height: inherit;
+}
+#woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsideone2 .list2 .listone a:hover {
+    color: #FF5150;
+    border-bottom:4px solid #FF5150 ;
+
+}
+
 #woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsidetwo .list {
     width: 70%;
     height: 100%;
@@ -519,14 +597,14 @@ margin-top: 20px;
 }
 #woui_web_normtopnoside .woui_web_normtopnoside-box {
     width: 100%;
-    height: 500px;
+    height: 510px;
     background: #E9EEF2;
     border: 1px solid #D2D2D2;
 }
 #woui_web_normtopnoside .woui_web_normtopnoside-box .woui_web_normtopsideone {
     height: 68px;
     background: #3F4464;
-    border: 1px solid #3F4464;
+    /*border: 1px solid #3F4464;*/
 }
 #woui_web_normtopnoside .woui_web_normtopnoside-box .woui_web_normtopsidetwo {
     height: 68px;
@@ -538,9 +616,9 @@ margin-top: 20px;
     position: relative;
 }
 #woui_web_normtopnoside .woui_web_normtopnoside-box .woui_web_normtopsidethree .woui_web_normtopsidethreeinner {
-    width: 98%;
+    /*width: 98%;*/
     height: 350px;
-    margin: 4px auto;
+    margin: 10px;
     background: #FFFFFF;
     border: 1px solid #D2D2D2;
 }
@@ -568,11 +646,11 @@ margin-top: 20px;
     width: 100%;
     display: block;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     color: #FFFFFF;
 }
 #woui_web_normtopnoside .woui_web_normtopnoside-box .woui_web_normtopsideone .list {
-    width: 60%;
+    width: 78%;
     height: 100%;
     float: right;
 }
@@ -585,7 +663,7 @@ margin-top: 20px;
     height: 100%;
     line-height: 68px;
     opacity: 0.5;
-    font-size: 16px;
+    font-size: 14px;
     color: #FFFFFF;
 }
 #woui_web_normtopnoside .woui_web_normtopnoside-box .woui_web_normtopsideone .list .listone a:hover {
@@ -605,7 +683,7 @@ margin-top: 20px;
     display: block;
     height: 100%;
     line-height: 68px;
-    font-size: 14px;
+    font-size: 12px;
     color: #777777;
     text-align: center;
 }

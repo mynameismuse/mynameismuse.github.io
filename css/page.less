@@ -62,7 +62,7 @@
 
 					&::before {
 						content: "";
-						disp lay: table;
+						display: table;
 					}
 
 					&::after {
@@ -78,6 +78,19 @@
 						font-weight: 400;
 						width: 100%;
 						color: @black;
+					}
+					.sidebar-title-link{
+						text-decoration: none;
+						&:hover,
+						&.current {
+							color: @purple;
+						}
+
+						&.current {
+							font-weight: 600;
+							border-right: 2px solid @purple;
+							box-sizing: border-box;
+						}
 					}
 
 					.sidebar-link {
