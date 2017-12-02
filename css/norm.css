@@ -97,7 +97,7 @@
     position: absolute;
     margin-top: 19px;
     margin-left: 10px;
-    color: #6869D1;
+    color: #9FA0F3;
 }
 
 /*chinses font*/
@@ -240,8 +240,8 @@ s #woui_web_norm_chinesefont .woui_web_norm_wrapper .woui_web_norm_chinesefont-b
 }
 
 #woui_web_norm_navigation .woui_web_norm_wrapper .woui_web_norm_wrapper-box > p.woui_web_norm-line {
-    width: 45%;
-    height: 18px;
+    width: 40%;
+    height: 16px;
     border-top: 1px solid #D2D2D2;
     margin-top: 2%;
     float: left;
@@ -254,8 +254,8 @@ s #woui_web_norm_chinesefont .woui_web_norm_wrapper .woui_web_norm_chinesefont-b
 }
 
 #woui_web_norm_navigation .woui_web_norm_wrapper .woui_web_norm_wrapper-box > p.woui_web_norm-number {
-    margin-left: 1.5%;
-    margin-top: -0.5px;
+    width:20%;
+    height:32px;
     text-align: center;
 }
 
@@ -395,7 +395,7 @@ margin-top: 20px;
     position: relative;
 }
 .containTwo .conMiddle .conMc{
-    width: 97%;
+    /*width: 97%;*/
     height: 412px;
     background: #FFFFFF;
     border: 1px solid #D2D2D2;
@@ -688,14 +688,35 @@ margin-top: 20px;
     text-align: center;
 }
 #woui_web_normtopnoside .woui_web_normtopnoside-box .woui_web_normtopsidetwo .list .listone a:hover {
-    font-size: 14px;
+    font-size: 12px;
     color: #FF5150;
     border-bottom: 1px solid #FF5150;
 }
 
 @media screen and (max-width: 1200px) {
 
-   #三-页面宽度, #四-页面布局, #woui_web_normdaohanglisttwo,#woui_web_norm_navigation, #woui_web_normtopside,#woui_web_normtopnoside,#woui_web_normdaohanglistone{
+   /*#三-页面宽度, #四-页面布局, #woui_web_normdaohanglisttwo,#woui_web_norm_navigation, #woui_web_normtopside,#woui_web_normtopnoside,#woui_web_normdaohanglistone{*/
+        /*display: none;*/
+    /*}*/
+    .containTwo .conSide #leader a,.containTwo .conSide #leader .firlogo .icon {display: none;}
+    .containTwo .conMiddle-top{
+        left:130px;
+        width:80%;
+        height:68px;
+        overflow: hidden;
+    }
+    .containTwo.conMiddle-top div{
+        overflow: hidden;
+        width:70px!important;
+    }
+    #woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsidethree .woui_web_normtopsidethreeinner .woui_web_normtopsidethreeinnernavigation .firname .firnamelist .sub-list,
+    #woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsidethree .woui_web_normtopsidethreeinner .woui_web_normtopsidethreeinnernavigation .firname .icon{
         display: none;
+    }
+}
+@media screen and (max-width: 990px){
+    .containTwo.conMiddle-top div:nth-child(2){
+        overflow: hidden;
+        width:50px!important;
     }
 }

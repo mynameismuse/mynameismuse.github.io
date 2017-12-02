@@ -1,26 +1,62 @@
 (function($) { 
-		  
+
 $(document).ready(function(){
+        var isLater = false;//打开或者关闭导航菜单
+        var cover = document.createElement('div')
+        cover.className = 'pushcover'
 
 
-    if($(window).width()>767){
-		$('.navbar-wrapper').animate({
-			opacity:0
-		},200);
-		$('.navbar-wrapper').addClass('default-menu');
+    $( ".navbar-toggle" ).on("click",function(event) {
+            event.preventDefault();//若动画正在进行请停止
+            if(!isLater){
+                $( ".resouseuimenu" ).addClass( "visible" );
+                $('.resoucesideright').addClass( "dime" );
+                $('.resoucesideright').append(cover);
 
-	}
+                $('.pushed').addClass('pushed-cover');
+
+                if($( ".resouseuimenu" ).attr("class").indexOf('visible') > 0){
+                    isLater = true;
+                    $( ".pushcover" ).on("click",function(event) {
+                        $(".resouseuimenu").removeClass("visible");
+                        $('.resoucesideright').removeClass("dime");
+                        $('.pushcover').remove();
+                            isLater = false;
+
+                    })
+
+                }
+                // console.log(cover.className)
+
+            }
 
 
-		$('.navbar-wrapper').animate({
-			opacity:1
-		},200);
+        });
 
 
 
 });
 
-
+    // $( ".navbar.navbar-inverse.navbar-static-top a" ).click(function() {
+    //     $( ".navbar-collapse" ).addClass( "hideClass" );
+    // });
+    //
+    //
+    // $( ".navbar.navbar-inverse.navbar-static-top a" ).click(function() {
+    //     $( ".navbar-collapse" ).addClass( "collapse" );
+    // });
+    //
+    //
+    // $( ".navbar.navbar-inverse.navbar-static-top a" ).click(function() {
+    //     $( ".navbar-collapse" ).removeClass( "in" );
+    // });
+    //
+    //
+    //
+    // $('#banner').show({
+    //     animation: 'fade',
+    //     play: 5000
+    // });
 	
 /*===========================================================*/
 	/*	Preloader 
@@ -32,13 +68,7 @@ $(document).ready(function(){
 	})
 //]]>
 		  
-// for mobile nav js	
-// $(window).load(function(){
-// 	$('button.navbar-toggle').click(function(){
-// 		$(this).toggleClass('active');
-// 		$('.navbar-collapse').slideToggle();
-// 	});
-// });
+
 // for banner height js
 var windowWidth = $(window).width();
 var windowHeight =$(window).height();

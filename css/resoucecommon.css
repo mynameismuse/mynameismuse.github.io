@@ -1,5 +1,5 @@
 * {
-  font-family: PingFangSC;
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 }
 .Resource-header {
   height: 80px;
@@ -12,8 +12,9 @@
   left: 0;
   /*width: 1120px!important;*/
   margin: 0 auto;
+  margin-top:-15px;
   line-height: 80px;
-  z-index: 900;
+  /*z-index: 299;*/
   position: relative;
 }
 .Resource-header .Resource-wrapper .container {
@@ -33,16 +34,17 @@
   float: left;
   font-size: 32px;
   font-weight: 400;
+  height:80px;
 }
 .Resource-header .Resource-wrapper .container .header-logo a {
   color: #6869D1;
   text-decoration: none;
+  line-height: 80px;
   display: block;
 }
 .Resource-header .Resource-wrapper .container .header-logo a img {
   height: 36px;
-  line-height: 80px;
-  vertical-align: sub;
+  /*vertical-align: sub;*/
 }
 .Resource-header .Resource-wrapper .container .nav {
   float: right;
@@ -50,7 +52,7 @@
   line-height: 80px;
   background-color: transparent;
   padding: 0;
-  margin: 0;
+  margin-top: 0;
 }
 .Resource-header .Resource-wrapper .container .nav .nav-item {
   margin: 0;
@@ -147,7 +149,7 @@
   transform: scaleX(1);
 }
 .Resource-footer {
-  height: 180px;
+  height: 120px;
   background-color: #fff ;
   color: #fff;
   width: 100%;
@@ -165,7 +167,7 @@
 .Resource-footer .Resource-wrapper li {
   display: inline-block;
   line-height: 1;
-  margin-top: 40px;
+  margin-top: 20px;
   position: relative;
 }
 .Resource-footer .Resource-wrapper li a {
@@ -273,11 +275,15 @@ position: relative;
 #banner .container .row .animate-box .feature-left div.other .bottom a {
   display: inline-block;
   height: 20px;
+  line-height: 20px;
   margin-right: 1%;
   font-size: 12px;
   text-align: center;
   color: #ACACAC;
   text-decoration: none;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 #banner .container .row .animate-box .feature-left div.other .bottom a:nth-child(2) {
   width: 20px;
@@ -296,7 +302,6 @@ position: relative;
   background: #6869D1;
   /*box-shadow: 0 3px 14px 0 #BDBDF2;*/
   border-radius: 100px;
-  border-radius: 100px;
   transition: all .2s ease;
   color: #fff;
 }
@@ -304,10 +309,12 @@ position: relative;
   padding-left: 5%;
   width: 40px;
   font-size: 14px;
+}
+#banner .container .row .animate-box .feature-left div.other .bottom span:last-child a{
   color: #6869D1;
 }
-.modalofdownload{
-/*position: relative;*/
+#banner .container .row .animate-box .feature-left div.other .bottom span:last-child .downlo:hover{
+  background: #fff;
 }
 .modalofdownload .zhezhao{
   position:fixed;
@@ -372,11 +379,16 @@ position: relative;
 .modalofdownload .xiazai .text2 div:last-child a{
   display: inline-block;
   height: 20px;
+  line-height: 20px;
   margin-right: 2%;
   font-size: 12px;
   text-align: center;
   color: #ACACAC;
   text-decoration: none;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+
 }
 .modalofdownload .xiazai .text2 div:last-child a:nth-child(4) {
   width: 20px;
