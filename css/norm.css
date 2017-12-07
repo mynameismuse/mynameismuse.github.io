@@ -410,6 +410,10 @@ margin-top: 20px;
     margin-top: 20px;
     display:inline-block;width:30px;height:20px;text-align: center;
 }
+.containTwo .conMiddle .conMc div span{
+    color: #777777;
+
+}
 .containTwo .conMiddle .conMc div a:hover{
     color: #FF5150;cursor: pointer;
 }
@@ -630,6 +634,10 @@ margin-top: 20px;
     color: #777777;
     margin-top: 20px;
     display:inline-block;width:30px;height:20px;text-align: center;
+}
+#woui_web_normtopnoside .woui_web_normtopnoside-box .woui_web_normtopsidethree .woui_web_normtopsidethreeinner .conMc div span{
+    color: #777777;
+
 }
 #woui_web_normtopnoside .woui_web_normtopnoside-box .woui_web_normtopsidethree .woui_web_normtopsidethreeinner .conMc div a:hover{
     color: #FF5150;

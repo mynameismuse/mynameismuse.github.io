@@ -9,6 +9,7 @@
     </title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <meta charset="utf-8">
     
         <link rel="stylesheet" href="/css/page.css">
     
@@ -18,6 +19,10 @@
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/js/sidebar.min.js"></script>
     <script type="text/javascript" src="/js/woUI.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
 
@@ -66,16 +71,17 @@
     }
 </style>
 
-<h1 id="分页组件"><a href="#分页组件" class="headerlink" title="分页组件"></a>分页组件</h1><h2 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h2> <div id="paginations"></div>
+<h1 id="分页组件"><a href="#分页组件" class="headerlink" title="分页组件"></a>分页组件</h1><h2 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h2><p><code>分页组件的</code>基本用法:初始化配置参数总页数,当前页,分页码数量,以及组件的承载容器<br>  传入的承载容器可以是Element,也可以是字符串如”#pages”</p>
+ <div id="paginations"></div>
 
-<p><code>分页组件的</code>基本用法:初始化配置参数总页数,当前页,分页码数量,以及组件的承载容器<br>  传入的承载容器可以是Element,也可以是字符串如”#pages”<br><div class="demo"><button class="demo-button"><i class="icon icon-arrow-down"></i><span>显示代码</span></button><div class="demo-content"><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"page"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">   <span class="keyword">var</span> odiv=<span class="built_in">document</span>.querySelector(<span class="string">"#paginations"</span>);</div><div class="line">  <span class="keyword">var</span> page1=<span class="keyword">new</span> Pagination(&#123;</div><div class="line">		el:odiv,</div><div class="line">		pageNum:<span class="number">6</span>,</div><div class="line">		currentPage:<span class="number">1</span>,</div><div class="line">		total:<span class="number">20</span>,</div><div class="line">		itemClass:<span class="string">""</span>,</div><div class="line">		nextpage:<span class="literal">true</span>,</div><div class="line">		prepage:<span class="literal">true</span>,</div><div class="line">	    nextPageclass:[<span class="string">"abc"</span>],</div><div class="line">		prePageClass:[<span class="string">"abc"</span>],</div><div class="line">		pageTogleClass:<span class="string">""</span>,</div><div class="line">		callback:func</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-</div></div></p>
+<div class="demo"><button class="demo-button"><i class="icon icon-arrow-down"></i><span>显示代码</span></button><div class="demo-content"><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"page"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">   <span class="keyword">var</span> odiv=<span class="built_in">document</span>.querySelector(<span class="string">"#paginations"</span>);</div><div class="line">  <span class="keyword">var</span> page1=<span class="keyword">new</span> woUI.Pagination(&#123;</div><div class="line">		el:odiv,</div><div class="line">		pageNum:<span class="number">6</span>,</div><div class="line">		currentPage:<span class="number">1</span>,</div><div class="line">		total:<span class="number">20</span>,</div><div class="line">		itemClass:<span class="string">""</span>,</div><div class="line">		nextpage:<span class="literal">true</span>,</div><div class="line">		prepage:<span class="literal">true</span>,</div><div class="line">	    nextPageclass:[<span class="string">"abc"</span>],</div><div class="line">		prePageClass:[<span class="string">"abc"</span>],</div><div class="line">		pageTogleClass:<span class="string">""</span>,</div><div class="line">		callback:func</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</div></div>
 <h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p><code>分页</code>组件为元素提供了自定义样式接口和回调函数，参数包括：<code>itemClass</code>(<code>分页页码</code>的样式-数组或字符串)、<code>nextpageClass</code>(‘下一页’按钮的样式)和<code>prepageClass</code>(<code>上一页</code>按钮的自定义样式)<br>callback是点击分页组件时执行的回调函数.<br><script type="text/javascript">  var func=function(param){
-        alert(JSON.stringify(param));
+       
 };
  var odiv=document.querySelector("#paginations");
-  var page1=new Pagination({
+  var page1=new woUI.Pagination({
 		el:odiv,
 		pageNum:6,
 		currentPage:1,

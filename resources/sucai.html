@@ -7,7 +7,9 @@
 <!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>sucai</title>
     <!--main style-->
     <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap.min.css">
@@ -15,25 +17,24 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/css/card.css">
     <link rel="shortcut icon" href="/img/bitbug_favicon.ico" type="image/x-icon">
 
-    <style>
-
-    </style>
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
 <!--手机端适配-->
-<div class="resouseuimenu">
-    <div class="cd-navigation-wrapper">
-        <div class="item-title"><a>菜单</a></div>
-        <div class="item"><a href="/docs/install.html">指南</a></div>
-        <div class="item"><a href="/norm/norm.html">规范</a></div>
-        <div class="item"><a href="/components/getting-started.html">组件</a></div>
-        <div class="item"><a href="/resources/pinpai.html">资源</a></div>
-        <div class="item"><a href="/about/about.html">关于</a></div>
-        <div class="item-title"><a>子菜单</a></div>
-        <div class="item"><a href="pinpai.html">品牌</a></div>
-        <div class="item"><a href="font.html">字体</a></div>
-        <div class="item"><a href="sucai.html">素材</a></div>
-    </div>
+<div class="resouseuimenu sidebar">
+    <div class="item-title"><a>菜单</a></div>
+    <div class="item"><a href="/docs/install.html">指南</a></div>
+    <div class="item"><a href="/norm/norm.html">规范</a></div>
+    <div class="item"><a href="/components/getting-started.html">组件</a></div>
+    <div class="item"><a href="/resources/pinpai.html">资源</a></div>
+    <div class="item"><a href="/about/about.html">关于</a></div>
+    <div class="item-title"><a>子菜单</a></div>
+    <div class="item"><a href="pinpai.html">品牌</a></div>
+    <div class="item"><a href="font.html">字体</a></div>
+    <div class="item"><a href="sucai.html">素材</a></div>
 </div>
 <!--Header start -->
 <div class="resoucesideright">
@@ -68,12 +69,14 @@
                     <div class="container">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="border-color:#fff"><img src="/img/sidebar.png" alt=""></button>
                         <div class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav">
+                            <div class="nav navbar-nav">
                                 <div class="container-one"><img src="/img/woui@2x.png" alt=""></div>
-                                <li class="menuItem"><a href="pinpai.html">品牌VI</a></li>
-                                <li class="menuItem active"><a href="sucai.html">UI素材</a></li>
-                                <li class="menuItem"><a href="font.html">版权字体</a></li>
-                            </ul>
+                                <ul>
+                                    <li class="menuItem"><a href="pinpai.html">品牌VI</a></li>
+                                    <li class="menuItem active"><a href="sucai.html">UI素材</a></li>
+                                    <li class="menuItem"><a href="font.html">版权字体</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
