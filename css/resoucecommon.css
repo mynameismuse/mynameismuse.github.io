@@ -218,7 +218,7 @@
   /*height:600px;*/
   margin-bottom: 40px;
 }
-#banner .container{
+#banner .container .row{
   width:90%;
   margin:0 auto;
   position: relative;
@@ -272,33 +272,38 @@
   color: #ACACAC;
   padding-right: 5%;
 }
-#banner .container .row .animate-box .feature-left div.other .bottom a {
+#banner .container .row .animate-box .feature-left div.other .bottom a{
+  text-decoration: none;
+}
+#banner .container .row .animate-box .feature-left div.other .bottom i {
   display: inline-block;
   height: 20px;
+  font-style: normal;
   line-height: 20px;
   margin-right: 1%;
   font-size: 12px;
   text-align: center;
   color: #ACACAC;
-  text-decoration: none;
   -webkit-transition-duration: 0.2s;
   -moz-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-#banner .container .row .animate-box .feature-left div.other .bottom a:nth-child(2) {
+#banner .container .row .animate-box .feature-left div.other .bottom i:nth-child(2) {
   width: 20px;
 }
-#banner .container .row .animate-box .feature-left div.other .bottom a:nth-child(3) {
-  width: 20px;
-}
-#banner .container .row .animate-box .feature-left div.other .bottom a:nth-child(4) {
+#banner .container .row .animate-box .feature-left div.other .bottom i:nth-child(3) {
   width: 38px;
 }
-#banner .container .row .animate-box .feature-left div.other .bottom a:nth-child(5) {
-  width: 58px;
-}
+/*#banner .container .row .animate-box .feature-left div.other .bottom a:nth-child(4) {*/
+  /*width: 38px;*/
+/*}*/
+/*#banner .container .row .animate-box .feature-left div.other .bottom a:nth-child(5) {*/
+  /*width: 58px;*/
+/*}*/
 
-#banner .container .row .animate-box .feature-left div.other .bottom a:hover {
+#banner .container .row .animate-box .feature-left div.other .bottom i:hover,
+#banner .container .row .animate-box .feature-left div.other .bottom .active,
+#banner .container .row .animate-box .feature-left div.other .bottom :active{
   background: #6869D1;
   /*box-shadow: 0 3px 14px 0 #BDBDF2;*/
   border-radius: 100px;
@@ -332,7 +337,7 @@
   height:560px;
   background: #FFFFFF;
   border-radius: 4px;
-  top:30%;left:30%;
+  /*top:30%;left:30%;*/
   z-index:400;
   /*left: expression(documentElement.scrollLeft + documentElement.clientWidth - this.offsetWidth);*/
   /*top: expression(documentElement.scrollTop + documentElement.clientHeight - this.offsetHeight);*/
