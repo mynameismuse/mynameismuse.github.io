@@ -453,13 +453,11 @@
 	}
 
 	//codeblock复制功能
-	var highlights = document.querySelectorAll('.highlight');
+	var highlights = document.querySelectorAll('.codeblock-copy');
 	for(var i = 0; i < highlights.length; i++) {
-		var icon = document.createElement('i')
-		icon.className = 'woui-icon icon-copy copy-button'
-		highlights[i].appendChild(icon)
-		var click = copyAction(icon);
-		icon.addEventListener('click', click);
+		highlights[i].className = 'woui-icon icon-copy copy-button'
+		var click = copyAction(highlights[i]);
+		highlights[i].addEventListener('click', click);
 	}
 
 </script>

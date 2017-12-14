@@ -63,7 +63,21 @@
 			<article class="article-container">
 				<div class="article-inner">
 					<div class="article">
-						<h1 id="基础规范"><a href="#基础规范" class="headerlink" title="基础规范"></a>基础规范</h1><h2 id="颜色规范"><a href="#颜色规范" class="headerlink" title="颜色规范"></a>颜色规范</h2><p>推荐使用以下色值作为设计和开发的基础配色。</p>
+						<style>
+    #woui_web_normfont-familly {
+        position: relative;
+    }
+
+    #woui_web_normfont-familly .copy-button {
+        position: absolute;
+        right: 60px;
+        color: #9FA0F3;
+        top: 15px;
+        z-index: 100;
+    }
+</style>
+
+<h1 id="基础规范"><a href="#基础规范" class="headerlink" title="基础规范"></a>基础规范</h1><h2 id="颜色规范"><a href="#颜色规范" class="headerlink" title="颜色规范"></a>颜色规范</h2><p>推荐使用以下色值作为设计和开发的基础配色。</p>
 <div id="woui_web_normcolorPlette">
 <div class="woui_web_norm_wrapper">
 <div class="woui_web_norm_item">
@@ -110,8 +124,14 @@
 </div>
 </div>
 <h2 id="文字规范"><a href="#文字规范" class="headerlink" title="文字规范"></a>文字规范</h2><p>各个浏览器调用系统默认字体，mac（iOS）优先的使用苹方字体，其他浏览器优先使用微软雅黑字体。</p>
-<div id="woui_web_normfont-familly"><div class="woui_web_norm_wrapper"><div class="woui_web_norm_font-box"><p><b>font-family：</b>“Helvetica Neue”,Helvetica,”PingFang SC”,”Hiragino Sans GB”,”Microsoft YaHei”,”微软雅黑”,Arial,sans-serif</p></div></div></div>
-
+<div id="woui_web_normfont-familly">
+    <i class="codeblock-copy"></i>
+    <div class="woui_web_norm_wrapper">
+        <div class="woui_web_norm_font-box">
+            <p><b>font-family：</b>"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif</p>
+        </div>
+    </div>
+</div>
 <h3 id="中文字体"><a href="#中文字体" class="headerlink" title="中文字体"></a>中文字体</h3><div id="woui_web_norm_chinesefont"><div class="woui_web_norm_wrapper"><div class="woui_web_norm_chinesefont-box one"><p>我是主标题</p><span class="woui_web_norm_chinesefont_sizecommon">18px</span><span class="woui_web_norm_chinesefont_common">主标题</span></div><div class="woui_web_norm_chinesefont-box two"><p>我是主标题</p><span class="woui_web_norm_chinesefont_sizecommon">16px</span><span class="woui_web_norm_chinesefont_common">次级标题</span></div><div class="woui_web_norm_chinesefont-box three"><p>我是主标题</p><span class="woui_web_norm_chinesefont_sizecommon">14px</span><span class="woui_web_norm_chinesefont_common">正文</span></div><div class="woui_web_norm_chinesefont-box four"><p>我是主标题</p><span class="woui_web_norm_chinesefont_sizecommon">12px</span><span class="woui_web_norm_chinesefont_common">Help Text</span></div></div></div>
 
 <h3 id="英文字体"><a href="#英文字体" class="headerlink" title="英文字体"></a>英文字体</h3><div id="woui_web_norm_englishfont"><div class="woui_web_norm_wrapper"><div class="woui_web_norm_chinesefont-box one"><p>This is an example</p><span class="woui_web_norm_chinesefont_sizecommon">18px</span><span class="woui_web_norm_chinesefont_common">Main Head</span></div><div class="woui_web_norm_chinesefont-box two"><p>This is an example</p><span class="woui_web_norm_chinesefont_sizecommon">16px</span><span class="woui_web_norm_chinesefont_common">Sub Head</span></div><div class="woui_web_norm_chinesefont-box three"><p>This is an example</p><span class="woui_web_norm_chinesefont_sizecommon">14px</span><span class="woui_web_norm_chinesefont_common">Text</span></div><div class="woui_web_norm_chinesefont-box four"><p>This is an example</p><span class="woui_web_norm_chinesefont_sizecommon">12px</span><span class="woui_web_norm_chinesefont_common">Help Text</span></div></div></div>
@@ -320,13 +340,11 @@
 	}
 
 	//codeblock复制功能
-	var highlights = document.querySelectorAll('.highlight');
+	var highlights = document.querySelectorAll('.codeblock-copy');
 	for(var i = 0; i < highlights.length; i++) {
-		var icon = document.createElement('i')
-		icon.className = 'woui-icon icon-copy copy-button'
-		highlights[i].appendChild(icon)
-		var click = copyAction(icon);
-		icon.addEventListener('click', click);
+		highlights[i].className = 'woui-icon icon-copy copy-button'
+		var click = copyAction(highlights[i]);
+		highlights[i].addEventListener('click', click);
 	}
 
 </script>
