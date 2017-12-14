@@ -29,7 +29,7 @@
 
     
         
-        <div class="ui sidebar inverted vertical menu"><a class="item-title">菜单</a><a class="item" href="/docs/install.html">指南</a><a class="item" href="/norm/norm.html">规范</a><a class="item" href="/components/setup.html">组件</a><a class="item" href="/resources/pinpai.html">资源</a><br><a class="item-title">子菜单</a><a class="item" href="setup.html">安装</a><a class="item" href="getting-started.html">快速上手</a><a class="item" href="component.html">更新日志</a><a class="item" href="button.html">按钮 Button</a><a class="item" href="breadcrumb.html">面包屑 Breadcrumb</a><a class="item" href="avatar.html">图片 Avatar</a><a class="item" href="tooltip.html">提示框 Tooltip</a><a class="item" href="menu.html">菜单 Menu</a><a class="item" href="message.html">消息框 Message</a><a class="item" href="checkbox.html">多选框 Checkbox</a><a class="item" href="tabs.html">标签页 Tabs</a><a class="item" href="pagination.html">分页 Pagination</a><a class="item" href="datepicker.html">日期选择器 Datepicker</a><a class="item" href="modal.html">对话框 Modal</a><a class="item" href="step.html">步骤条 Steps</a><a class="item" href="form.html">表单 Form</a><a class="item" href="icon.html">图标 Icon</a><a class="item" href="input.html">输入框 Input</a><a class="item" href="table.html">表格 Table</a></div>
+        <div class="ui sidebar inverted vertical menu"><a class="item-title">菜单</a><a class="item" href="/docs/install.html">指南</a><a class="item" href="/norm/woui.html">规范</a><a class="item" href="/components/setup.html">组件</a><a class="item" href="/resources/pinpai.html">资源</a><br><a class="item-title">子菜单</a><a class="item" href="setup.html">安装</a><a class="item" href="getting-started.html">快速上手</a><a class="item" href="component.html">更新日志</a><a class="item" href="button.html">按钮 Button</a><a class="item" href="breadcrumb.html">面包屑 Breadcrumb</a><a class="item" href="avatar.html">头像 Avatar</a><a class="item" href="tooltip.html">提示框 Tooltip</a><a class="item" href="menu.html">菜单 Menu</a><a class="item" href="message.html">消息框 Message</a><a class="item" href="checkbox.html">多选框 Checkbox</a><a class="item" href="tabs.html">标签页 Tabs</a><a class="item" href="pagination.html">分页 Pagination</a><a class="item" href="datepicker.html">日期选择器 Datepicker</a><a class="item" href="modal.html">对话框 Modal</a><a class="item" href="step.html">步骤条 Steps</a><a class="item" href="form.html">表单 Form</a><a class="item" href="icon.html">图标 Icon</a><a class="item" href="input.html">输入框 Input</a><a class="item" href="table.html">表格 Table</a></div>
     
 
 <div class="main">
@@ -45,7 +45,7 @@
 			</h1>
 			<ul class="nav">
 				
-				<li class="nav-item"><a href="/docs/install.html">指南</a></li><li class="nav-item"><a href="/norm/norm.html">规范</a></li><li class="nav-item"><a href="/components/setup.html">组件</a></li><li class="nav-item"><a href="/resources/pinpai.html">资源</a></li>
+				<li class="nav-item"><a href="/docs/install.html">指南</a></li><li class="nav-item"><a href="/norm/woui.html">规范</a></li><li class="nav-item"><a href="/components/setup.html">组件</a></li><li class="nav-item"><a href="/resources/pinpai.html">资源</a></li>
 				<li class="nav-item mobile" id="mobile-icon">
 					<a>
 						
@@ -75,7 +75,7 @@
 <h1 id="分页组件"><a href="#分页组件" class="headerlink" title="分页组件"></a>分页组件</h1><h2 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h2><p><code>分页组件的</code>基本用法:初始化配置参数总页数,当前页,分页码数量,以及组件的承载容器<br>  传入的承载容器可以是Element,也可以是字符串如”#pages”</p>
  <div id="paginations"></div>
 
-<div class="demo"><button class="demo-button"><i class="woui-icon icon-arrow-down"></i><span>显示代码</span></button><div class="demo-content"><i class="woui-icon icon-delete copy-button"></i><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"page"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<div class="demo"><button class="demo-button"><i class="woui-icon icon-arrow-down"></i><span>显示代码</span></button><div class="demo-content"><i class="woui-icon icon-copy copy-button"></i><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"page"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">   <span class="keyword">var</span> odiv=<span class="built_in">document</span>.querySelector(<span class="string">"#paginations"</span>);</div><div class="line">  <span class="keyword">var</span> page1=<span class="keyword">new</span> woUI.Pagination(&#123;</div><div class="line">		el:odiv,</div><div class="line">		pageNum:<span class="number">6</span>,</div><div class="line">		currentPage:<span class="number">1</span>,</div><div class="line">		total:<span class="number">20</span>,</div><div class="line">		itemClass:<span class="string">""</span>,</div><div class="line">		nextpage:<span class="literal">true</span>,</div><div class="line">		prepage:<span class="literal">true</span>,</div><div class="line">	    nextPageclass:[<span class="string">"abc"</span>],</div><div class="line">		prePageClass:[<span class="string">"abc"</span>],</div><div class="line">		pageTogleClass:<span class="string">""</span>,</div><div class="line">		callback:func</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 </div></div>
 <h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p><code>分页</code>组件为元素提供了自定义样式接口和回调函数，参数包括：<code>itemClass</code>(<code>分页页码</code>的样式-数组或字符串)、<code>nextpageClass</code>(‘下一页’按钮的样式)和<code>prepageClass</code>(<code>上一页</code>按钮的自定义样式)<br>callback是点击分页组件时执行的回调函数.<br><script type="text/javascript">  var func=function(param){
@@ -109,7 +109,7 @@
 			<aside class="sidebar">
 				<div class="inner">
 					
-					<a class="sidebar-title sidebar-title-link" href="setup.html">安装</a><a class="sidebar-title sidebar-title-link" href="getting-started.html">快速上手</a><a class="sidebar-title sidebar-title-link" href="component.html">更新日志</a><strong class="sidebar-title">基础组件</strong><a class="sidebar-link"" href="button.html">按钮 Button</a><a class="sidebar-link"" href="breadcrumb.html">面包屑 Breadcrumb</a><a class="sidebar-link"" href="avatar.html">图片 Avatar</a><a class="sidebar-link"" href="tooltip.html">提示框 Tooltip</a><a class="sidebar-link"" href="menu.html">菜单 Menu</a><a class="sidebar-link"" href="message.html">消息框 Message</a><a class="sidebar-link"" href="checkbox.html">多选框 Checkbox</a><a class="sidebar-link"" href="tabs.html">标签页 Tabs</a><a class="sidebar-link current"" href="pagination.html">分页 Pagination</a><a class="sidebar-link"" href="datepicker.html">日期选择器 Datepicker</a><a class="sidebar-link"" href="modal.html">对话框 Modal</a><a class="sidebar-link"" href="step.html">步骤条 Steps</a><a class="sidebar-link"" href="form.html">表单 Form</a><a class="sidebar-link"" href="icon.html">图标 Icon</a><a class="sidebar-link"" href="input.html">输入框 Input</a><a class="sidebar-link"" href="table.html">表格 Table</a>
+					<a class="sidebar-title sidebar-title-link" href="setup.html">安装</a><a class="sidebar-title sidebar-title-link" href="getting-started.html">快速上手</a><a class="sidebar-title sidebar-title-link" href="component.html">更新日志</a><strong class="sidebar-title">基础组件</strong><a class="sidebar-link"" href="button.html">按钮 Button</a><a class="sidebar-link"" href="breadcrumb.html">面包屑 Breadcrumb</a><a class="sidebar-link"" href="avatar.html">头像 Avatar</a><a class="sidebar-link"" href="tooltip.html">提示框 Tooltip</a><a class="sidebar-link"" href="menu.html">菜单 Menu</a><a class="sidebar-link"" href="message.html">消息框 Message</a><a class="sidebar-link"" href="checkbox.html">多选框 Checkbox</a><a class="sidebar-link"" href="tabs.html">标签页 Tabs</a><a class="sidebar-link current"" href="pagination.html">分页 Pagination</a><a class="sidebar-link"" href="datepicker.html">日期选择器 Datepicker</a><a class="sidebar-link"" href="modal.html">对话框 Modal</a><a class="sidebar-link"" href="step.html">步骤条 Steps</a><a class="sidebar-link"" href="form.html">表单 Form</a><a class="sidebar-link"" href="icon.html">图标 Icon</a><a class="sidebar-link"" href="input.html">输入框 Input</a><a class="sidebar-link"" href="table.html">表格 Table</a>
 				</div>
 			</aside>
 		</div>
@@ -249,7 +249,6 @@
 	//复制功能
 	var copys = document.querySelectorAll('.copy-button');
 	for(var i = 0; i < copys.length; i++) {
-		console.log(copys[i]);
 		var click = copyAction(copys[i]);
 		copys[i].addEventListener('click', click);
 	}
@@ -258,7 +257,6 @@
 
 	function copyAction (el) {
 		return function () {
-			console.log(el.parentNode)
 			var clipboard = new Clipboard(el.parentNode, {
 				target: function() {
 					return el.parentNode
@@ -272,8 +270,10 @@
 				e.clearSelection();
 				 msg.show({
 			    message: '复制成功',
-			    type: 'success',
-			    duration: 3
+			    iconType: 'green',
+			    duration: 3,
+			    iconClass: 'woui-icon icon-success',
+			    showClose: true
 			  })
 			})
 		}

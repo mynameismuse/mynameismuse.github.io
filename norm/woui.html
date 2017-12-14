@@ -29,7 +29,7 @@
 
     
         
-        <div class="ui sidebar inverted vertical menu"><a class="item-title">菜单</a><a class="item" href="/docs/install.html">指南</a><a class="item" href="/norm/norm.html">规范</a><a class="item" href="/components/setup.html">组件</a><a class="item" href="/resources/pinpai.html">资源</a><br><a class="item-title">子菜单</a><a class="item current" href="woui.html">WoUI</a><a class="item" href="norm.html">基础规范</a><a class="item" href="struct.html">页面布局</a></div>
+        <div class="ui sidebar inverted vertical menu"><a class="item-title">菜单</a><a class="item" href="/docs/install.html">指南</a><a class="item" href="/norm/woui.html">规范</a><a class="item" href="/components/setup.html">组件</a><a class="item" href="/resources/pinpai.html">资源</a><br><a class="item-title">子菜单</a><a class="item current" href="woui.html">WOUI</a><a class="item" href="norm.html">基础规范</a><a class="item" href="struct.html">页面布局</a></div>
     
 
 <div class="main">
@@ -45,7 +45,7 @@
 			</h1>
 			<ul class="nav">
 				
-				<li class="nav-item"><a href="/docs/install.html">指南</a></li><li class="nav-item"><a href="/norm/norm.html">规范</a></li><li class="nav-item"><a href="/components/setup.html">组件</a></li><li class="nav-item"><a href="/resources/pinpai.html">资源</a></li>
+				<li class="nav-item"><a href="/docs/install.html">指南</a></li><li class="nav-item"><a href="/norm/woui.html">规范</a></li><li class="nav-item"><a href="/components/setup.html">组件</a></li><li class="nav-item"><a href="/resources/pinpai.html">资源</a></li>
 				<li class="nav-item mobile" id="mobile-icon">
 					<a>
 						
@@ -69,10 +69,8 @@
   }
 </style>
 
-<h1 id="WoUI"><a href="#WoUI" class="headerlink" title="WoUI"></a>WoUI</h1><h2 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h2>   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;技术部用户体验设计中心对接支付公司所有产品业务线的设计工作，随着公司业务规模的迅速发展，产品需求大量增加，产品的设计和研
-发过程中将会遇到很多类似的页面和组件，这给设计师和前端工程师带来很多重复性的工作，大大降低了工作效率。前端工程师们在产品研发
-过程中也会有不同的实现方式，代码质量参差不齐，语法风格不统一。<br>  
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用户体验设计中心通过大量的项目实践，以公司品牌为核心总结和沉淀出一套用于web端产品设计开发的基础组件库WOUI, 帮助设计师和前端工程师快速搭建网站，保证公司各个产品业务线体验的一致性。</p>     
+<h1 id="WOUI"><a href="#WOUI" class="headerlink" title="WOUI"></a>WOUI</h1><h2 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;技术部用户体验设计中心对接支付公司所有产品业务线的设计工作，随着公司业务规模的迅速发展，产品需求大量增加，产品的设计和研发过程中将会遇到很多类似的页面和组件，这给设计师和前端工程师带来很多重复性的工作，大大降低了工作效率。前端工程师们在产品研发过程中也会有不同的实现方式，代码质量参差不齐，语法风格不统一。<br>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用户体验设计中心通过大量的项目实践，以公司品牌为核心总结和沉淀出一套用于web端产品设计开发的基础组件库WOUI, 帮助设计师和前端工程师快速搭建网站，保证公司各个产品业务线体验的一致性。</p>     
 <h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;具有学习成本低，上手速度快，实现效果好，轻量，小巧且精美的视觉呈现。    </p>    
 <h2 id="价值"><a href="#价值" class="headerlink" title="价值"></a>价值</h2> 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;将网站界面中常见的视觉样式和通用组件用前端代码开发并实现，需要时直接调用，帮助设计师，前端工程师快速构建页面，避免了重复
@@ -93,7 +91,7 @@
 			<aside class="sidebar">
 				<div class="inner">
 					
-					<a class="sidebar-title sidebar-title-link current" href="woui.html">WoUI</a><a class="sidebar-title sidebar-title-link" href="norm.html">基础规范</a><a class="sidebar-title sidebar-title-link" href="struct.html">页面布局</a>
+					<a class="sidebar-title sidebar-title-link current" href="woui.html">WOUI</a><a class="sidebar-title sidebar-title-link" href="norm.html">基础规范</a><a class="sidebar-title sidebar-title-link" href="struct.html">页面布局</a>
 				</div>
 			</aside>
 		</div>
@@ -233,7 +231,6 @@
 	//复制功能
 	var copys = document.querySelectorAll('.copy-button');
 	for(var i = 0; i < copys.length; i++) {
-		console.log(copys[i]);
 		var click = copyAction(copys[i]);
 		copys[i].addEventListener('click', click);
 	}
@@ -242,7 +239,6 @@
 
 	function copyAction (el) {
 		return function () {
-			console.log(el.parentNode)
 			var clipboard = new Clipboard(el.parentNode, {
 				target: function() {
 					return el.parentNode
@@ -256,8 +252,10 @@
 				e.clearSelection();
 				 msg.show({
 			    message: '复制成功',
-			    type: 'success',
-			    duration: 3
+			    iconType: 'green',
+			    duration: 3,
+			    iconClass: 'woui-icon icon-success',
+			    showClose: true
 			  })
 			})
 		}

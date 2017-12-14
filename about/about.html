@@ -29,7 +29,7 @@
 
     
         
-        <div class="ui sidebar inverted vertical menu"><a class="item-title">菜单</a><a class="item" href="/docs/install.html">指南</a><a class="item" href="/norm/norm.html">规范</a><a class="item" href="/components/setup.html">组件</a><a class="item" href="/resources/pinpai.html">资源</a><br><a class="item-title">子菜单</a></div>
+        <div class="ui sidebar inverted vertical menu"><a class="item-title">菜单</a><a class="item" href="/docs/install.html">指南</a><a class="item" href="/norm/woui.html">规范</a><a class="item" href="/components/setup.html">组件</a><a class="item" href="/resources/pinpai.html">资源</a><br><a class="item-title">子菜单</a></div>
     
 
 <div class="main">
@@ -45,7 +45,7 @@
 			</h1>
 			<ul class="nav">
 				
-				<li class="nav-item"><a href="/docs/install.html">指南</a></li><li class="nav-item"><a href="/norm/norm.html">规范</a></li><li class="nav-item"><a href="/components/setup.html">组件</a></li><li class="nav-item"><a href="/resources/pinpai.html">资源</a></li>
+				<li class="nav-item"><a href="/docs/install.html">指南</a></li><li class="nav-item"><a href="/norm/woui.html">规范</a></li><li class="nav-item"><a href="/components/setup.html">组件</a></li><li class="nav-item"><a href="/resources/pinpai.html">资源</a></li>
 				<li class="nav-item mobile" id="mobile-icon">
 					<a>
 						
@@ -218,7 +218,6 @@
 	//复制功能
 	var copys = document.querySelectorAll('.copy-button');
 	for(var i = 0; i < copys.length; i++) {
-		console.log(copys[i]);
 		var click = copyAction(copys[i]);
 		copys[i].addEventListener('click', click);
 	}
@@ -227,7 +226,6 @@
 
 	function copyAction (el) {
 		return function () {
-			console.log(el.parentNode)
 			var clipboard = new Clipboard(el.parentNode, {
 				target: function() {
 					return el.parentNode
@@ -241,8 +239,10 @@
 				e.clearSelection();
 				 msg.show({
 			    message: '复制成功',
-			    type: 'success',
-			    duration: 3
+			    iconType: 'green',
+			    duration: 3,
+			    iconClass: 'woui-icon icon-success',
+			    showClose: true
 			  })
 			})
 		}
