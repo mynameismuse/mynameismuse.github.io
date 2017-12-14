@@ -474,6 +474,9 @@ margin-top: 20px;
     line-height: 46px;
     padding-top: 10px;
 }
+#woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsidethree .woui_web_normtopsidethreeinner .woui_web_normtopsidethreeinnernavigation .firname .firnamelist i{
+    padding-left: 20px;
+}
 #woui_web_normtopside .woui_web_normtopside-box .woui_web_normtopsidethree .woui_web_normtopsidethreeinner .woui_web_normtopsidethreeinnernavigation .firname .firnamelist .sub-list {
     width: 100%!important;
     height: 100%;
