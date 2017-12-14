@@ -7,7 +7,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 200;
+    z-index: 0;
 }
 
 .navwrapper .container{
@@ -31,10 +31,13 @@
     margin: 0 auto;
     text-align: center;
     float: none;
-    margin-top:100px;
+    margin-top:60px;
+}
+.navbar-nav .container-one{
+    padding-bottom: 25px;
 }
 .navbar-nav >ul{
-    margin:0;padding:0;
+    margin:0 auto;padding:0;
 }
 .navbar-nav >ul> li{
     float: none;
@@ -211,7 +214,7 @@
     color: #333333;
 }
 .fontdes .container .row .card .middle {
-    height: 50px;
+    /*height: 50px;*/
     text-align: center;
 }
 .fontdes .container .row .card .middle img {
@@ -234,13 +237,14 @@
 }
 .fontdes .container .row .card .shuoming-introduct a {
     display: block;
-    width: 337px;
+    width: 320px;
     margin: 0 auto;
     height: 160px;
     font-size: 14px;
     color: #999999;
     text-decoration: none;
     line-height: 32px;
+    font-weight: 200;
 }
 .fontdes .container .row .card .bottom {
     width: 100%;
@@ -355,6 +359,7 @@ ul.portfolioContainer li{
     height:auto;
     padding:0px;
     margin: 0 30px 30px 0;
+    /*margin：0 auto；*/
     cursor:pointer;
     border:1px solid #fff;
     /*width:24.8%;*/
@@ -380,7 +385,8 @@ ul.portfolioContainer li .card-box .topimg img{
     height:24px;
     width:64px;
     position: absolute;
-    top:0;
+    top:-1px;
+    left: -1px;
     z-index: 100;
     overflow: hidden;
 }
@@ -454,9 +460,9 @@ ul.portfolioContainer li .card .middle .box a img{
 .isotope .isotope-item {
     /* change duration value to whatever you like */
 
-    -webkit-transition-duration: 0.8s;
-    -moz-transition-duration: 0.8s;
-    transition-duration: 0.8s;
+    -webkit-transition-duration: 0.6s;
+    -moz-transition-duration: 0.6s;
+    transition-duration: 0.6s;
 }
 .isotope {
     -webkit-transition-property: height, width;
@@ -716,6 +722,9 @@ ul.portfolioContainer li .card .middle .box a img{
     .navbar-nav .container-one{
         display: none;
     }
+    #banner .container .row{
+        margin-top: -120px;
+    }
     #banner .container .row .animate-box{
         margin-left: 0px!important;
     }
@@ -905,6 +914,16 @@ ul.portfolioContainer li .card .middle .box a img{
     .fontdes .container .row .card .shuoming-introduct a{
         width:250px;
     }
+    ul.portfolioContainer{
+        width: 320px!important;
+    }
+    ul.portfolioContainer li{
+        margin: 0 !important;
 
+    }
+    ul.portfolioContainer li .card{
+        width:100%;
+        margin: 0 auto!important;
+    }
 
 }
