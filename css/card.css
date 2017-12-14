@@ -644,8 +644,8 @@ ul.portfolioContainer li .card .middle .box a img{
         margin:0 auto;
 
     }
-    #banner .container{
-        width:90%;
+    #banner .container .row{
+        width:110%;
         margin:0 auto;
         position: relative;
     }
@@ -854,5 +854,29 @@ ul.portfolioContainer li .card .middle .box a img{
 
 
 @media screen and (max-width: 400px) {
-
+    #banner .container .row .animate-box{
+        margin-left: 0px!important;
+    }
+    #banner .container .row .animate-box .feature-left div.other .top{
+        font-size: 14px!important;
+    }
+    #banner .container .row .animate-box .feature-left div.icon img{
+        width:80px!important;
+    }
+    #banner .container .row .animate-box .feature-left{
+        padding:30px 0!important;
+    }
+    .fontdes .container .row{
+        width:300px!important;
+    }
+    .fontdes .container .row div{
+        width:300px!important;
+        margin:0 auto;
+    }
+    .fontdes .container .row .card .middle img{
+        width:250px;
+    }
+    .fontdes .container .row .card .shuoming-introduct a{
+        width:250px;
+    }
 }

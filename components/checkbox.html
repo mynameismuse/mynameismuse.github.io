@@ -201,9 +201,10 @@ checkboxGroup1.on('color', function(e){
 </blockquote>
 <p><code>callback</code>: 传入callback则取消当前回调，不传入则取消当前元素所有回调</p>
 <h3 id="改变选中状态"><a href="#改变选中状态" class="headerlink" title="改变选中状态"></a>改变选中状态</h3><blockquote>
-<p>woUI.Checkbox.prototype.change(status)</p>
+<p>woUI.Checkbox.prototype.change(status, preventBroadcast)</p>
 </blockquote>
-<p><code>status</code>: 传入改变状态的值，支持 <code>Boolean</code> 格式。不传入则进行切换（<code>toggle</code>）。<strong>通过此方法改变 Checkbox 的值，也会触发 <code>on</code> 事件，并受其返回值的影响。</strong></p>
+<p><code>status</code>: 传入改变状态的值，支持 <code>Boolean</code> 格式。不传入则进行切换（<code>toggle</code>）。<strong>通过此方法改变 Checkbox 的值，默认会触发 <code>on</code> 事件，并受其返回值的影响。如需要不触发 <code>on</code> 事件，需要配置 <code>preventBroadcast</code> 参数</strong></p>
+<p><code>preventBroadcast</code>: 阻止传播。在执行此方法后，不会触发 <code>on</code> 事件。</p>
 <h3 id="改变禁止选择状态"><a href="#改变禁止选择状态" class="headerlink" title="改变禁止选择状态"></a>改变禁止选择状态</h3><blockquote>
 <p>woUI.Checkbox.prototype.disabled(status)</p>
 </blockquote>
@@ -220,15 +221,17 @@ checkboxGroup1.on('color', function(e){
 </blockquote>
 <p>如果 <code>checkbox</code> 每组多于一个，则返回最后一个 <code>checkbox</code> 的状态</p>
 <h3 id="多选框组改变元素的状态"><a href="#多选框组改变元素的状态" class="headerlink" title="多选框组改变元素的状态"></a>多选框组改变元素的状态</h3><blockquote>
-<p>woUI.CheckboxGroup.prototype.changeByChecked(name, checked)</p>
+<p>woUI.CheckboxGroup.prototype.changeByChecked(name, checked, preventBroadcast)</p>
 </blockquote>
 <p><code>name</code>: 为空则改变所有多选框状态，不为空则改变当前元素名的状态。</p>
 <p><code>checked</code>: 支持 <code>Boolean</code> 格式的选中状态。不传则为切换 （<code>toggle</code>）。</p>
+<p><code>preventBroadcast</code>: 阻止传播。在执行此方法后，不会触发 <code>on</code> 事件。</p>
 <h3 id="多选框组改变元素的值"><a href="#多选框组改变元素的值" class="headerlink" title="多选框组改变元素的值"></a>多选框组改变元素的值</h3><blockquote>
-<p>woUI.CheckboxGroup.prototype.changeByValue(name,value)</p>
+<p>woUI.CheckboxGroup.prototype.changeByValue(name, value, preventBroadcast)</p>
 </blockquote>
-<p><code>name</code>: 为要改变的多选框的元素名</p>
-<p><code>value</code>: 必须为数组形式的值</p>
+<p><code>name</code>: 为要改变的多选框的元素名。</p>
+<p><code>value</code>: 必须为数组形式的值。</p>
+<p><code>preventBroadcast</code>: 阻止传播。在执行此方法后，不会触发 <code>on</code> 事件。</p>
 <h3 id="多选框组监听改变-取消监听"><a href="#多选框组监听改变-取消监听" class="headerlink" title="多选框组监听改变/取消监听"></a>多选框组监听改变/取消监听</h3><blockquote>
 <p>woUI.CheckboxGroup.prototype.on(name, callback)</p>
 </blockquote>
@@ -248,11 +251,13 @@ checkboxGroup1.on('color', function(e){
 <h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>当 Checkbox 内容中，有需要触发 <code>click</code> 事件的元素时，需要对元素进行阻止默认事件 <code>preventDefault</code> 处理。否则点击此元素，会触发 Checkbox 状态改变。例：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"J_Checkbox1"</span>&gt;</span></div><div class="line">    阅读并同意<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color:red"</span> <span class="attr">id</span>=<span class="string">"J_Test"</span>&gt;</span>Test<span class="tag">&lt;/<span class="name">span</span>&gt;</span>协议</div><div class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">    <span class="built_in">document</span>.querySelector(<span class="string">'#J_Test'</span>).addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span></div><div class="line"><span class="undefined">        e.preventDefault()</span></div><div class="line"><span class="javascript">        <span class="built_in">window</span>.alert(<span class="string">'这是原有内容的事件'</span>)</span></div><div class="line"><span class="undefined">    &#125;)</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 					</div>
-					<div class="article-toc">
-						<div class="article-toc-inner">
-							<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#多选框"><span class="toc-text">多选框</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#多选框代码演示"><span class="toc-text">多选框代码演示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#建立一个新颖的多选框"><span class="toc-text">建立一个新颖的多选框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#监听一个多选框操作事件"><span class="toc-text">监听一个多选框操作事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#操作一个多选框的状态"><span class="toc-text">操作一个多选框的状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多选框组合操作"><span class="toc-text">多选框组合操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多选框-html-支持属性"><span class="toc-text">多选框 html 支持属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多选框-API"><span class="toc-text">多选框 API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化"><span class="toc-text">初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取值"><span class="toc-text">获取值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取状态"><span class="toc-text">获取状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#监听改变-取消监听"><span class="toc-text">监听改变/取消监听</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#改变选中状态"><span class="toc-text">改变选中状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#改变禁止选择状态"><span class="toc-text">改变禁止选择状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多选框组初始化"><span class="toc-text">多选框组初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多选框组返回对象形式的当前值"><span class="toc-text">多选框组返回对象形式的当前值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多选框组返回对象形式的选中状态"><span class="toc-text">多选框组返回对象形式的选中状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多选框组改变元素的状态"><span class="toc-text">多选框组改变元素的状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多选框组改变元素的值"><span class="toc-text">多选框组改变元素的值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多选框组监听改变-取消监听"><span class="toc-text">多选框组监听改变/取消监听</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多选框组改变禁止选择状态"><span class="toc-text">多选框组改变禁止选择状态</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意"><span class="toc-text">注意</span></a></li></ol></li></ol>
+					
+						<div class="article-toc">
+							<div class="article-toc-inner">
+								<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#多选框"><span class="toc-text">多选框</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#多选框代码演示"><span class="toc-text">多选框代码演示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#建立一个新颖的多选框"><span class="toc-text">建立一个新颖的多选框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#监听一个多选框操作事件"><span class="toc-text">监听一个多选框操作事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#操作一个多选框的状态"><span class="toc-text">操作一个多选框的状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多选框组合操作"><span class="toc-text">多选框组合操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多选框-html-支持属性"><span class="toc-text">多选框 html 支持属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多选框-API"><span class="toc-text">多选框 API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化"><span class="toc-text">初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取值"><span class="toc-text">获取值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取状态"><span class="toc-text">获取状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#监听改变-取消监听"><span class="toc-text">监听改变/取消监听</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#改变选中状态"><span class="toc-text">改变选中状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#改变禁止选择状态"><span class="toc-text">改变禁止选择状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多选框组初始化"><span class="toc-text">多选框组初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多选框组返回对象形式的当前值"><span class="toc-text">多选框组返回对象形式的当前值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多选框组返回对象形式的选中状态"><span class="toc-text">多选框组返回对象形式的选中状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多选框组改变元素的状态"><span class="toc-text">多选框组改变元素的状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多选框组改变元素的值"><span class="toc-text">多选框组改变元素的值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多选框组监听改变-取消监听"><span class="toc-text">多选框组监听改变/取消监听</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多选框组改变禁止选择状态"><span class="toc-text">多选框组改变禁止选择状态</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意"><span class="toc-text">注意</span></a></li></ol></li></ol>
+							</div>
 						</div>
-					</div>
+					
 				</div>
 			</article>
 			<aside class="sidebar">
