@@ -31,6 +31,7 @@
     margin: 0 auto;
     text-align: center;
     float: none;
+    margin-top:100px;
 }
 .navbar-nav >ul{
     margin:0;padding:0;
@@ -75,7 +76,7 @@
 
 
 .navbar.navbar-inverse.navbar-static-top {
-    margin:0px auto;
+    margin:0 auto;
     background:none;
     /*color:#c3c8d6;*/
     border:none;
@@ -83,7 +84,7 @@
     font-size:12px;
     font-weight:600;
     text-transform:uppercase;
-    margin-top:80px;
+    /*margin-top:80px;*/
 }
 .navbar.navbar-inverse.navbar-static-top a{
     color:#6869D1;
@@ -133,17 +134,7 @@
     /*position: relative;;*/
     z-index: 100;
 }
-/*.navbar.navbar-inverse.navbar-static-top a:hover{*/
-    /*background: none;*/
-    /*color:#7879ec;*/
-    /*z-index: 100;*/
-/*}*/
-/*.navbar-inverse .navbar-nav> ul >.active>a:hover::after{*/
-    /*transform: scaleX(1)!important;*/
-/*}*/
-/*.default-menu {*/
-    /*margin-top:80px;*/
-/*}*/
+
 .navbar-wrapper{
     -o-transition: all .5s;
     -ms-transition: all .5s;
@@ -644,6 +635,9 @@ ul.portfolioContainer li .card .middle .box a img{
         margin:0 auto;
 
     }
+    #banner .container .row .animate-box{
+        margin-left: 40px!important;
+    }
     #banner .container .row{
         width:110%;
         margin:0 auto;
@@ -660,14 +654,19 @@ ul.portfolioContainer li .card .middle .box a img{
         margin:0 auto;
 
     }
+    #banner .container .row .animate-box{
+        margin-left: 40px!important;
+    }
+
 }
 @media screen and (max-width: 1142px){
-    /*.downloadicon{*/
-        /*width:120px!important;*/
-    /*}*/
-    /*#banner .container .row .animate-box .feature-left div.other .bottom{*/
-        /*padding-top:12px!important;*/
-    /*}*/
+
+    #banner .container .row .animate-box{
+        margin-left: 40px!important;
+    }
+    #banner .container .row .animate-box .feature-left div.icon img{
+        width:110px!important;
+    }
 }
 @media screen and (max-width: 991px) {
     ul.portfolioContainer,.Resource-header .Resource-wrapper .container,.portfolioFilter .intro{
@@ -675,6 +674,7 @@ ul.portfolioContainer li .card .middle .box a img{
         margin:0 auto;
 
     }
+
     .fontdes .container .row{
         width:500px;
         /*height: 630px;*/
@@ -701,15 +701,26 @@ ul.portfolioContainer li .card .middle .box a img{
     .modalofdownload .xiazai .text2 div{
         display: none;
     }
+    #banner .container .row .animate-box .feature-left div.icon img{
+        width:110px!important;
+    }
 
 }
 
+@media screen and (max-width: 930px){
 
+}
 
 
 @media screen and (max-width: 810px) {
     .navbar-nav .container-one{
         display: none;
+    }
+    #banner .container .row .animate-box{
+        margin-left: 0px!important;
+    }
+    #banner .container .row .animate-box .feature-left div.icon img{
+        width:110px!important;
     }
 
 }
@@ -720,6 +731,9 @@ ul.portfolioContainer li .card .middle .box a img{
     .navbar.navbar-inverse.navbar-static-top a {
         padding-left:12px;
         padding-right:12px;
+    }
+    #banner .container .row .animate-box .feature-left div.icon img{
+        width:120px!important;
     }
 
 }
@@ -732,7 +746,7 @@ ul.portfolioContainer li .card .middle .box a img{
 
     }
     .Resource-header .Resource-wrapper .container{
-        width:90%;
+        width:90%!important;
         margin:0 auto;
         position: relative;
         z-index: -1;
@@ -775,7 +789,7 @@ ul.portfolioContainer li .card .middle .box a img{
         display: none;
     }
     .navbar-toggle {
-        margin-top: -109px!important;
+        margin-top: -29px!important;
         width:50px;
         position: relative;
         z-index: 999;
@@ -806,6 +820,9 @@ ul.portfolioContainer li .card .middle .box a img{
     .Resource-wrapper .fir .github{
         display: none;
     }
+    #banner .container .row .animate-box .feature-left div.icon img{
+        width:120px!important;
+    }
 
 }
 
@@ -815,7 +832,9 @@ ul.portfolioContainer li .card .middle .box a img{
         display: none;
     }
 
-
+    #banner .container .row .animate-box .feature-left div.icon img{
+        width:120px!important;
+    }
 
 }
 
@@ -850,6 +869,12 @@ ul.portfolioContainer li .card .middle .box a img{
         height:360px;
         left:16%;
     }
+    #banner .container .row .animate-box .feature-left div.icon img{
+        width:100px!important;
+    }
+    #banner .container .row, .fontdes .container .row,.protfolio {
+        margin-top: -60px!important;
+    }
 }
 
 
@@ -868,6 +893,7 @@ ul.portfolioContainer li .card .middle .box a img{
     }
     .fontdes .container .row{
         width:300px!important;
+        margin-top: -60px;
     }
     .fontdes .container .row div{
         width:300px!important;
@@ -879,4 +905,6 @@ ul.portfolioContainer li .card .middle .box a img{
     .fontdes .container .row .card .shuoming-introduct a{
         width:250px;
     }
+
+
 }
