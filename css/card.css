@@ -927,3 +927,17 @@ ul.portfolioContainer li .card .middle .box a img{
     }
 
 }
+
+/*---------------------------------------------------------------------------------
+	upload sucai
+-------------------------------------------------------------------------------*/
+.upload{
+    width:100%;
+}
+.upwrapper{
+    width:20%;    margin:0 auto;
+
+}
+.upload input{
+    width:100%;
+}
